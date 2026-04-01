@@ -1798,6 +1798,117 @@ input[type="file"] {
   margin-bottom: 8px;
 }
 
+/* ========================================
+   FOUNDER SOCIALS SECTION
+   ======================================== */
+
+.socials-section {
+  background: var(--black);
+  padding: 100px 0;
+}
+
+.socials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 30px 40px;
+  border-radius: 16px;
+  background: var(--black-light);
+  border: 1px solid var(--gray-dark);
+  transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.social-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--red);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.social-card .social-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: transform 0.3s;
+}
+
+.social-card:hover .social-icon {
+  transform: scale(1.1);
+}
+
+.social-youtube .social-icon {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff0000;
+}
+.social-youtube:hover { border-color: #ff0000; }
+
+.social-instagram .social-icon {
+  background: linear-gradient(135deg, rgba(131, 58, 180, 0.15), rgba(253, 29, 29, 0.15), rgba(252, 176, 69, 0.15));
+  color: #e1306c;
+}
+.social-instagram:hover { border-color: #e1306c; }
+
+.social-tiktok .social-icon {
+  background: rgba(0, 242, 234, 0.1);
+  color: #00f2ea;
+}
+.social-tiktok:hover { border-color: #00f2ea; }
+
+.social-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.social-card p {
+  color: var(--gray-light);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.social-cta {
+  display: inline-block;
+  padding: 10px 32px;
+  border: 2px solid var(--red);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+  transition: background 0.3s, color 0.3s;
+}
+
+.social-card:hover .social-cta {
+  background: var(--red);
+  color: var(--white-pure);
+}
+
+@media (max-width: 768px) {
+  .socials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .social-card {
+    padding: 40px 24px 32px;
+  }
+}
+
 @media (max-width: 1024px) {
   .admin-team-grid { grid-template-columns: 1fr; }
   .admin-messages-grid { grid-template-columns: 1fr; }
